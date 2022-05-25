@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Currency Visualization</title>
+		<link rel="stylesheet" href="./css/site.css" />
+	</head>
+	<body>
+		<!-- Title Bar -->
+        <section class="TitleBar">
+            <h1>Currency Visualization</h1>
+			<!-- Currency Select -->
+            <div class="CurrencyChooser">
+                <label>Base currency:
+                    <select onChange="getAPI()" class="CurrencyChooser-select">
+						<!-- API data inputed here -->
+                    </select>
+                </label>
+            </div>
+        </section>
+		<div class="CurrencyCheckboxList">
+			<!-- API data inputed here -->
+		</div>
+				<div class="BarChart">
+				</div>
+        </div>
+		<script src="js/main.js"></script>
+	</body>
+</html>
+

@@ -1,0 +1,114 @@
+/* Color Pallate Variables */
+:root {
+    --text: black;
+    --bg: #E6BA95;
+    --alt-bg: #FAFDD6;
+    --bar-a: #A2B38B;
+    --bar-b: #E4E9BE;
+    --header-height: 100px;
+}
+
+
+body {
+    background-color: var(--bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Title Bar */
+
+.TitleBar {
+    padding-left: 10vw;
+    color: var(--text);
+    background-color: var(--alt-bg);
+    box-shadow: 0px 3px;
+    height: var(--header-height);
+
+    font-size: 25px;
+    font-weight: bold;
+    
+    /* Grid Styling */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 2em;
+    align-items: middle;
+}
+
+.TitleBar > h1 {
+    font-size: 30pt;
+    letter-spacing: 1px;
+    padding-top: 5px;
+}
+
+
+/* Bar Chart */
+
+.BarChart {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 10px;
+    align-items: end;
+    height: calc(100vh - var(--header-height));
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.BarChart-bar {
+    background-color: var(--bar-a);
+    color: var(--text);
+    font-size: 8vh;
+    font-family: 'Lucida Sans';
+    text-align: center;
+    max-height: 90%;
+    min-height: 40%;
+}
+
+.BarChart-bar:hover {
+    cursor: pointer;
+    transform: perspective(1000px) translate3d(0px, 0px, 100px);
+}
+
+/* For alternating colors on bar */
+.BarChart-bar:nth-child(even) {
+    background-color: var(--bar-b);
+}
+
+/* Currency Chooser */
+
+.CurrencyChooser {
+    float: right;
+}
+
+.CurrencyChooser-select {
+    border: 1px solid var(--bar-a);
+    background: var(--bar-b);
+    padding: 2px;
+}
+
+.CurrencyChooser-select > option {
+    color: var(--text);
+}
+
+.CurrencyCheckboxList {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
+    align-items: middle;    
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 10px;
+    font-size: 1.8rem;
+}
+
+.CurrencyCheckboxList input[type=checkbox] {
+    display: none;
+}
+
+.CurrencyCheckboxList input:focus + span {
+    background-color: var(--bar-a);
+    color: var(--text);
+    border: 3px solid var(--bar-b);
+    box-sizing: border-box;
+}
